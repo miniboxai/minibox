@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"path/filepath"
 
-	"minibox.ai/pkg/core/job"
-	"minibox.ai/pkg/core/option"
-	"minibox.ai/pkg/core/volume"
+	"minibox.ai/minibox/pkg/core/job"
+	"minibox.ai/minibox/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/volume"
 )
 
 func (cfg *Config) Start(ctxt context.Context, opts *option.StartJobOption) (*job.Job, error) {

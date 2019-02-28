@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 func TestGetDatasetObject(t *testing.T) {

@@ -17,7 +17,7 @@ import (
 	grpc_auth "github.com/grpc-ecosystem/go-grpc-middleware/auth"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
 
-	"minibox.ai/pkg/server"
+	"minibox.ai/minibox/pkg/server"
 )
 
 var (

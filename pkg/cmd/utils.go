@@ -13,9 +13,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/oauth"
-	v1 "minibox.ai/pkg/api/v1"
-	log "minibox.ai/pkg/logger"
-	"minibox.ai/pkg/oauth2/provider"
+	v1 "minibox.ai/minibox/pkg/api/v1"
+	log "minibox.ai/minibox/pkg/logger"
+	"minibox.ai/minibox/pkg/oauth2/provider"
 )
 
 type ClientOption struct {

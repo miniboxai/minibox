@@ -7,7 +7,7 @@ import (
 	"os"
 
 	yaml "gopkg.in/yaml.v2"
-	"minibox.ai/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/option"
 )
 
 var defaultLanguages map[interface{}]interface{}

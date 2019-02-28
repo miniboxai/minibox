@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 
 	osin "github.com/RangelReale/osin"
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/sessions"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/sessions"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 func getParam(r *http.Request, key string) (string, bool) {

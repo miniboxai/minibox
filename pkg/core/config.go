@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 
 	yaml "gopkg.in/yaml.v2"
-	"minibox.ai/pkg/core/config/v1"
-	"minibox.ai/pkg/core/errors"
-	"minibox.ai/pkg/core/option"
-	"minibox.ai/pkg/core/project"
+	"minibox.ai/minibox/pkg/core/config/v1"
+	"minibox.ai/minibox/pkg/core/errors"
+	"minibox.ai/minibox/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/project"
 )
 
 type Config struct {

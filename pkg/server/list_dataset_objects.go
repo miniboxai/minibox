@@ -4,7 +4,7 @@ import (
 	"context"
 	"path"
 
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 func (s *Server) ListDatasetObjects(ctx context.Context, in *types.ListObjectsRequest) (*types.ObjectsReply, error) {

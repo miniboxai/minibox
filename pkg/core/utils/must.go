@@ -7,7 +7,7 @@ import (
 
 	oerrors "errors"
 
-	"minibox.ai/pkg/core/errors"
+	"minibox.ai/minibox/pkg/core/errors"
 )
 
 type Map = map[interface{}]interface{}

@@ -7,9 +7,9 @@ import (
 	"path"
 	"strings"
 
-	"minibox.ai/pkg/api/v1/proto"
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/api/v1/proto"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 func path2ns(pat string) (ns, dir string) {

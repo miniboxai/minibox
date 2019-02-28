@@ -10,15 +10,15 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	bopt "minibox.ai/pkg/backend/option"
+	bopt "minibox.ai/minibox/pkg/backend/option"
 
-	"minibox.ai/pkg/backend/docker"
-	"minibox.ai/pkg/core"
+	"minibox.ai/minibox/pkg/backend/docker"
+	"minibox.ai/minibox/pkg/core"
 
-	pcontext "minibox.ai/pkg/core/context"
-	"minibox.ai/pkg/core/job"
-	"minibox.ai/pkg/core/option"
-	"minibox.ai/pkg/logger"
+	pcontext "minibox.ai/minibox/pkg/core/context"
+	"minibox.ai/minibox/pkg/core/job"
+	"minibox.ai/minibox/pkg/core/option"
+	"minibox.ai/minibox/pkg/logger"
 )
 
 var (

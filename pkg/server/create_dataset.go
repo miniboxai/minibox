@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/server/internal/option"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/server/internal/option"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 func (s *Server) orgsNamespaces(orgs []*types.Organization) []string {

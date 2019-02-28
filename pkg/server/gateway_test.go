@@ -12,7 +12,7 @@ import (
 	"github.com/gogo/gateway"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"google.golang.org/grpc"
-	pb "minibox.ai/pkg/api/v1/proto"
+	pb "minibox.ai/minibox/pkg/api/v1/proto"
 )
 
 func TestHttpGateway(t *testing.T) {

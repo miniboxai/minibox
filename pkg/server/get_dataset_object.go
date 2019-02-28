@@ -4,8 +4,8 @@ import (
 	"io"
 	"path"
 
-	"minibox.ai/pkg/api/v1/proto"
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/proto"
+	"minibox.ai/minibox/pkg/api/v1/types"
 	bytes "qiniupkg.com/x/bytes.v7"
 )
 

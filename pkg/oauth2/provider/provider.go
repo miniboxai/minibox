@@ -6,10 +6,10 @@ import (
 
 	"github.com/RangelReale/osin"
 	"golang.org/x/oauth2"
-	"minibox.ai/pkg/apiserver/signin/google"
-	oclient "minibox.ai/pkg/oauth2/client"
-	"minibox.ai/pkg/sessions"
-	"minibox.ai/pkg/utils/tmpl"
+	"minibox.ai/minibox/pkg/apiserver/signin/google"
+	oclient "minibox.ai/minibox/pkg/oauth2/client"
+	"minibox.ai/minibox/pkg/sessions"
+	"minibox.ai/minibox/pkg/utils/tmpl"
 )
 
 var Prefix = "/oauth"

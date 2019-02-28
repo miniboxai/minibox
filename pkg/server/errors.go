@@ -3,7 +3,7 @@ package server
 import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"minibox.ai/pkg/server/internal/acl"
+	"minibox.ai/minibox/pkg/server/internal/acl"
 )
 
 var (

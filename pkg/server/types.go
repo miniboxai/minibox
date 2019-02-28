@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/server/internal/storage"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/server/internal/storage"
 )
 
 // 类型转换表, types 到 models 的转换

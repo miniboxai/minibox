@@ -1,7 +1,7 @@
 package main
 
 import (
-	"minibox.ai/pkg/cmd"
+	"minibox.ai/minibox/pkg/cmd"
 )
 
 func main() {

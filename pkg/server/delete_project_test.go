@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 func TestDeleteProject(t *testing.T) {

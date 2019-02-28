@@ -11,7 +11,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/spf13/viper"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 type Database struct {

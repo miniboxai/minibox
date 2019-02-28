@@ -3,7 +3,7 @@ package core
 import (
 	"reflect"
 
-	"minibox.ai/pkg/core/errors"
+	"minibox.ai/minibox/pkg/core/errors"
 )
 
 type Map = map[interface{}]interface{}

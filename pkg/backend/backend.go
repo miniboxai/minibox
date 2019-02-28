@@ -3,8 +3,8 @@ package backend
 import (
 	"context"
 
-	"minibox.ai/pkg/backend/option"
-	"minibox.ai/pkg/core/job"
+	"minibox.ai/minibox/pkg/backend/option"
+	"minibox.ai/minibox/pkg/core/job"
 )
 
 type Executor interface {

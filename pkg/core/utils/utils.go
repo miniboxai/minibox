@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/delicb/gstring"
-	pcontext "minibox.ai/pkg/core/context"
-	"minibox.ai/pkg/core/errors"
+	pcontext "minibox.ai/minibox/pkg/core/context"
+	"minibox.ai/minibox/pkg/core/errors"
 )
 
 var ContextKey = struct{}{}

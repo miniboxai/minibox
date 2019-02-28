@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"log"
 
-	"minibox.ai/pkg/errors"
+	"minibox.ai/minibox/pkg/errors"
 
-	pb "minibox.ai/pkg/api/v1/core"
-	"minibox.ai/pkg/database"
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/utils"
+	pb "minibox.ai/minibox/pkg/api/v1/core"
+	"minibox.ai/minibox/pkg/database"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 type Server struct{}

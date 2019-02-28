@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"minibox.ai/pkg/utils/random"
+	"minibox.ai/minibox/pkg/utils/random"
 )
 
 const shortLen = 12

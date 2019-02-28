@@ -9,11 +9,11 @@ import (
 	"github.com/kr/pretty"
 
 	gerrors "github.com/pkg/errors"
-	"minibox.ai/pkg/core/errors"
-	"minibox.ai/pkg/core/node"
-	"minibox.ai/pkg/core/option"
-	u "minibox.ai/pkg/core/utils"
-	"minibox.ai/pkg/logger"
+	"minibox.ai/minibox/pkg/core/errors"
+	"minibox.ai/minibox/pkg/core/node"
+	"minibox.ai/minibox/pkg/core/option"
+	u "minibox.ai/minibox/pkg/core/utils"
+	"minibox.ai/minibox/pkg/logger"
 )
 
 var prioriEvals = []string{"framework", "datadir", "logdir", "workdir"}

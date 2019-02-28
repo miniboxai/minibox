@@ -6,8 +6,8 @@ import (
 	"log"
 
 	cobra "github.com/spf13/cobra"
-	v1 "minibox.ai/pkg/api/v1"
-	"minibox.ai/pkg/api/v1/types"
+	v1 "minibox.ai/minibox/pkg/api/v1"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 var projectCmd = &cobra.Command{

@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	cobra "github.com/spf13/cobra"
-	v1 "minibox.ai/pkg/api/v1"
-	types "minibox.ai/pkg/api/v1/types"
+	v1 "minibox.ai/minibox/pkg/api/v1"
+	types "minibox.ai/minibox/pkg/api/v1/types"
 )
 
 var newCmd = &cobra.Command{

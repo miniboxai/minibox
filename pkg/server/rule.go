@@ -2,8 +2,8 @@ package server
 
 import (
 	lru "github.com/hashicorp/golang-lru"
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/server/internal/acl"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/server/internal/acl"
 )
 
 var (

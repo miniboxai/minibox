@@ -11,7 +11,7 @@ import (
 	"github.com/go-testfixtures/testfixtures"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 var (

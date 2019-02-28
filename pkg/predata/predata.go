@@ -7,7 +7,7 @@ import (
 	"path"
 	"path/filepath"
 
-	ut "minibox.ai/pkg/utils"
+	ut "minibox.ai/minibox/pkg/utils"
 )
 
 var (

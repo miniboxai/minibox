@@ -1,7 +1,7 @@
 package sessions
 
 import (
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/models"
 )
 
 func GetCurrentUser(session *Session) *models.User {

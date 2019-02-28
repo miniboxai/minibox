@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"google.golang.org/grpc/credentials"
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/server/internal/option"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/server/internal/option"
 )
 
 type UserOption func(*Server, *types.User)

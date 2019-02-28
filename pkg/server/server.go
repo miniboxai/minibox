@@ -5,18 +5,18 @@ import (
 
 	"github.com/jinzhu/gorm"
 	"google.golang.org/grpc"
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_auth "github.com/grpc-ecosystem/go-grpc-middleware/auth"
 	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	grpc_validator "github.com/grpc-ecosystem/go-grpc-middleware/validator"
 
-	pb "minibox.ai/pkg/api/v1/proto"
+	pb "minibox.ai/minibox/pkg/api/v1/proto"
 
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/server/internal/object_store"
-	"minibox.ai/pkg/server/internal/storage"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/server/internal/object_store"
+	"minibox.ai/minibox/pkg/server/internal/storage"
 )
 
 type Server struct {

@@ -9,8 +9,8 @@ import (
 
 	gerr "github.com/pkg/errors"
 
-	u "minibox.ai/pkg/core/utils"
-	"minibox.ai/pkg/utils/semver"
+	u "minibox.ai/minibox/pkg/core/utils"
+	"minibox.ai/minibox/pkg/utils/semver"
 )
 
 type Framework struct {

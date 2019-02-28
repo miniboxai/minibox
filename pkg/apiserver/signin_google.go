@@ -14,10 +14,10 @@ import (
 	"github.com/gorilla/schema"
 	"github.com/spf13/viper"
 	"golang.org/x/oauth2"
-	"minibox.ai/pkg/apiserver/signin/google"
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/sessions"
-	"minibox.ai/pkg/utils/tmpl"
+	"minibox.ai/minibox/pkg/apiserver/signin/google"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/sessions"
+	"minibox.ai/minibox/pkg/utils/tmpl"
 )
 
 // Google 登陆服务模块， 我们采用了多个 ServeMux 组合服务的方案，这让我们可以通过下面语句

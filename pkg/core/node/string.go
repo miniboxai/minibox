@@ -4,7 +4,7 @@ import (
 	"context"
 	"reflect"
 
-	"minibox.ai/pkg/core/utils"
+	"minibox.ai/minibox/pkg/core/utils"
 )
 
 type NodeString struct {

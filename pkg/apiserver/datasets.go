@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"minibox.ai/pkg/models"
-	"minibox.ai/pkg/utils/tmpl"
+	"minibox.ai/minibox/pkg/models"
+	"minibox.ai/minibox/pkg/utils/tmpl"
 )
 
 type Datasets struct {

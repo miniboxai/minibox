@@ -3,7 +3,7 @@ package v1
 import (
 	"context"
 
-	pcontext "minibox.ai/pkg/core/context"
+	pcontext "minibox.ai/minibox/pkg/core/context"
 )
 
 func NewContext(prjName string, initials map[string]interface{}) context.Context {

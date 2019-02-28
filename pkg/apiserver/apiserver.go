@@ -1,6 +1,6 @@
 // Package apiserver API 服务器 组织管理整个业务逻辑，启动 服务器提供核心业务，
 // 与 k8s 的沟通， 并提供部署业务， 数据管理服务，以及配置服务等
-package apiserver // import "minibox.ai/pkg/apiserver"
+package apiserver // import "minibox.ai/minibox/pkg/apiserver"
 
 import (
 	"log"
@@ -9,11 +9,11 @@ import (
 
 	osin "github.com/RangelReale/osin"
 	ulogger "github.com/go-http-utils/logger"
-	oauth_storage "minibox.ai/pkg/apiserver/oauth_storage"
-	"minibox.ai/pkg/models"
-	oauth2provider "minibox.ai/pkg/oauth2/provider"
-	"minibox.ai/pkg/sessions"
-	"minibox.ai/pkg/utils/tmpl"
+	oauth_storage "minibox.ai/minibox/pkg/apiserver/oauth_storage"
+	"minibox.ai/minibox/pkg/models"
+	oauth2provider "minibox.ai/minibox/pkg/oauth2/provider"
+	"minibox.ai/minibox/pkg/sessions"
+	"minibox.ai/minibox/pkg/utils/tmpl"
 )
 
 // ApiServer 采用了 http.ServeMux 模块载入的方案

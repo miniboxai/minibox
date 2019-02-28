@@ -1,4 +1,4 @@
-//go:generate mockgen -destination mock/clients.go minibox.ai/pkg/api/v1 ClientInterface
+//go:generate mockgen -destination mock/clients.go minibox.ai/minibox/pkg/api/v1 ClientInterface
 
 package v1
 
@@ -7,8 +7,8 @@ import (
 
 	types1 "github.com/gogo/protobuf/types"
 	"google.golang.org/grpc"
-	"minibox.ai/pkg/api/v1/proto"
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/proto"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 type ClientInterface interface {

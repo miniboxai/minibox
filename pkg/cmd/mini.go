@@ -1,4 +1,4 @@
-package cmd // import "minibox.ai/pkg/cmd"
+package cmd // import "minibox.ai/minibox/pkg/cmd"
 
 import (
 	"fmt"

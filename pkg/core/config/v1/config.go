@@ -3,8 +3,8 @@ package v1
 import (
 	"net/url"
 
-	"minibox.ai/pkg/core/node"
-	"minibox.ai/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/node"
+	"minibox.ai/minibox/pkg/core/option"
 )
 
 // ---

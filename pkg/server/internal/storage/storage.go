@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/jinzhu/gorm"
-	"minibox.ai/pkg/server/internal/option"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/server/internal/option"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 type Storage struct {

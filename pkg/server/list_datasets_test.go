@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 func TestListDatasets(t *testing.T) {
