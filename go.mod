@@ -1,4 +1,4 @@
-module minibox.ai
+module minibox.ai/minibox
 
 replace github.com/go-fsnotify/fsnotify v0.0.0-20180321022601-755488143dae => github.com/fsnotify/fsnotify v1.4.7
 
