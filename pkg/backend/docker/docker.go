@@ -11,13 +11,13 @@ import (
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/api/types/mount"
 	"github.com/docker/docker/client"
-	"minibox.ai/pkg/backend/option"
-	"minibox.ai/pkg/core/job"
+	"minibox.ai/minibox/pkg/backend/option"
+	"minibox.ai/minibox/pkg/core/job"
 
-	"minibox.ai/pkg/logger"
+	"minibox.ai/minibox/pkg/logger"
 
-	"minibox.ai/pkg/utils"
-	"minibox.ai/pkg/utils/pretty"
+	"minibox.ai/minibox/pkg/utils"
+	"minibox.ai/minibox/pkg/utils/pretty"
 )
 
 type Backend struct {

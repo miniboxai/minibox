@@ -9,9 +9,9 @@ import (
 
 	cobra "github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	v1 "minibox.ai/pkg/api/v1"
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/predata"
+	v1 "minibox.ai/minibox/pkg/api/v1"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/predata"
 )
 
 var (

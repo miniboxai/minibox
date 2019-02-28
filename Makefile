@@ -185,7 +185,7 @@ pkg/api/v1/%.pb.go: pkg/api/v1/%.proto
 	Mgoogle/protobuf/empty.proto=github.com/gogo/protobuf/types,\
 	Mgoogle/api/annotations.proto=github.com/gogo/googleapis/google/api,\
 	Mgoogle/protobuf/field_mask.proto=github.com/gogo/protobuf/types,\
-	Mtypes.proto=minibox.ai/pkg/api/v1/types:\
+	Mtypes.proto=minibox.ai/minibox/pkg/api/v1/types:\
 	$(dir) \
 			--grpc-gateway_out=\
 	Mgoogle/protobuf/timestamp.proto=github.com/gogo/protobuf/types,\
@@ -193,7 +193,7 @@ pkg/api/v1/%.pb.go: pkg/api/v1/%.proto
 	Mgoogle/protobuf/empty.proto=github.com/gogo/protobuf/types,\
 	Mgoogle/api/annotations.proto=github.com/gogo/googleapis/google/api,\
 	Mgoogle/protobuf/field_mask.proto=github.com/gogo/protobuf/types,\
-	Mtypes.proto=minibox.ai/pkg/api/v1/types:\
+	Mtypes.proto=minibox.ai/minibox/pkg/api/v1/types:\
 	$(dir) \
 			--swagger_out=third_party/OpenAPI/ \
 			--govalidators_out=gogoimport=true,\
@@ -202,7 +202,7 @@ pkg/api/v1/%.pb.go: pkg/api/v1/%.proto
 	Mgoogle/protobuf/empty.proto=github.com/gogo/protobuf/types,\
 	Mgoogle/api/annotations.proto=github.com/gogo/googleapis/google/api,\
 	Mgoogle/protobuf/field_mask.proto=github.com/gogo/protobuf/types,\
-	Mtypes.proto=minibox.ai/pkg/api/v1/types:\
+	Mtypes.proto=minibox.ai/minibox/pkg/api/v1/types:\
 	$(dir) \
 			$?
 

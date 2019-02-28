@@ -3,8 +3,8 @@ package v1
 import (
 	"context"
 
-	"minibox.ai/pkg/core/node"
-	"minibox.ai/pkg/core/utils"
+	"minibox.ai/minibox/pkg/core/node"
+	"minibox.ai/minibox/pkg/core/utils"
 )
 
 type Nodes map[string]node.Noder

@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 func (s *Server) DeleteDataset(ctx context.Context, in *types.DeleteDatasetRequest) (*types.Dataset, error) {

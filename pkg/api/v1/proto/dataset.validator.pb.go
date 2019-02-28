@@ -12,7 +12,7 @@ import _ "github.com/gogo/protobuf/gogoproto"
 import _ "github.com/gogo/protobuf/types"
 import _ "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options"
 import _ "github.com/mwitkow/go-proto-validators"
-import _ "minibox.ai/pkg/api/v1/types"
+import _ "minibox.ai/minibox/pkg/api/v1/types"
 
 import time "time"
 

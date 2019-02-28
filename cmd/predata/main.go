@@ -1,6 +1,6 @@
 package main
 
-import "minibox.ai/pkg/cmd"
+import "minibox.ai/minibox/pkg/cmd"
 
 func main() {
 	cmd := cmd.PredataCommand()

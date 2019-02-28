@@ -3,7 +3,7 @@ package oauth_storage
 import (
 	"encoding/json"
 
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/models"
 )
 
 type (

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	osin "github.com/RangelReale/osin"
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/models"
 )
 
 type Storage struct {

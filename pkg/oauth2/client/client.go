@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/viper"
 	oauth2 "golang.org/x/oauth2"
-	"minibox.ai/pkg/database"
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/database"
+	"minibox.ai/minibox/pkg/models"
 )
 
 // config :=  client.From("1234", "secret")

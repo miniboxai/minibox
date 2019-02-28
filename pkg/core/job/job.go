@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/fatih/color"
-	"minibox.ai/pkg/core/volume"
+	"minibox.ai/minibox/pkg/core/volume"
 )
 
 type Job struct {

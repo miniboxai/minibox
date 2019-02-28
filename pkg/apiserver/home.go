@@ -3,8 +3,8 @@ package apiserver
 import (
 	"net/http"
 
-	"minibox.ai/pkg/sessions"
-	"minibox.ai/pkg/utils/tmpl"
+	"minibox.ai/minibox/pkg/sessions"
+	"minibox.ai/minibox/pkg/utils/tmpl"
 )
 
 func homeMiddleware(next http.Handler) http.Handler {

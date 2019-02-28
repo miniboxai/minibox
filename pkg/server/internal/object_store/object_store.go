@@ -16,8 +16,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 
-	"minibox.ai/pkg/logger"
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/logger"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 type WriteAtBuffer = aws.WriteAtBuffer

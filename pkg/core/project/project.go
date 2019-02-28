@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"minibox.ai/pkg/core/job"
-	"minibox.ai/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/job"
+	"minibox.ai/minibox/pkg/core/option"
 )
 
 type Parser interface {

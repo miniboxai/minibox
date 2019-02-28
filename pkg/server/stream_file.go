@@ -3,8 +3,8 @@ package server
 import (
 	"io"
 
-	"minibox.ai/pkg/api/v1/proto"
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/proto"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 type StreamWriter struct {

@@ -7,7 +7,7 @@ import (
 	"github.com/golang/mock/gomock"
 	// "github.com/golang/mock/sample"
 	// "github.com/golang/mock/sample/imp1"
-	mock "minibox.ai/pkg/api/v1/mock"
+	mock "minibox.ai/minibox/pkg/api/v1/mock"
 )
 
 func TestClients(t *testing.T) {

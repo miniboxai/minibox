@@ -3,7 +3,7 @@ package v1
 import (
 	"context"
 
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/models"
 )
 
 func getCurrntUser(ctx context.Context) (*models.User, bool) {

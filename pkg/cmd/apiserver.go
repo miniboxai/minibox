@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
-	"minibox.ai/pkg/apiserver"
+	"minibox.ai/minibox/pkg/apiserver"
 )
 
 var serveCmd = &cobra.Command{

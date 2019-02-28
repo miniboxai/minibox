@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"minibox.ai/pkg/errors"
+	"minibox.ai/minibox/pkg/errors"
 )
 
 func ParseBuild(val interface{}) (*Build, error) {

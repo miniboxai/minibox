@@ -11,7 +11,7 @@ import (
 	"github.com/fatih/color"
 	cobra "github.com/spf13/cobra"
 
-	"minibox.ai/pkg/utils"
+	"minibox.ai/minibox/pkg/utils"
 )
 
 var WaitLoginDuration = 5 * time.Minute

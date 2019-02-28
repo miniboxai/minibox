@@ -20,7 +20,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/status"
-	"minibox.ai/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/api/v1/types"
 )
 
 var _ codes.Code

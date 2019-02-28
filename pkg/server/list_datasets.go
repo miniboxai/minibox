@@ -3,10 +3,10 @@ package server
 import (
 	"context"
 
-	"minibox.ai/pkg/api/v1/types"
-	"minibox.ai/pkg/logger"
-	"minibox.ai/pkg/server/internal/acl"
-	"minibox.ai/pkg/server/internal/option"
+	"minibox.ai/minibox/pkg/api/v1/types"
+	"minibox.ai/minibox/pkg/logger"
+	"minibox.ai/minibox/pkg/server/internal/acl"
+	"minibox.ai/minibox/pkg/server/internal/option"
 )
 
 func (s *Server) ListDatasets(ctx context.Context, in *types.ListDatasetsRequest) (*types.DatasetsReply, error) {

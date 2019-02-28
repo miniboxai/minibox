@@ -6,7 +6,7 @@ import (
 	"log"
 
 	osin "github.com/RangelReale/osin"
-	"minibox.ai/pkg/models"
+	"minibox.ai/minibox/pkg/models"
 )
 
 func oauth2osin(oauth *models.OAuth2Authorize) *osin.AuthorizeData {

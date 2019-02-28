@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/kr/pretty"
-	"minibox.ai/pkg/core/option"
+	"minibox.ai/minibox/pkg/core/option"
 )
 
 type testTrainer struct {
