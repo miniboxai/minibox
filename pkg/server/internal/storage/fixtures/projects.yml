@@ -1,0 +1,10 @@
+# projects.yaml
+- id: 1
+  name: "apple"
+  namespace: "apple"
+  author_id: 1
+
+- id: 2
+  name: "iphone 4"
+  namespace: "apple"
+  author_id: 1

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+</head>
+<body>
+	<div class="nav">
+		Minibox.AI {{ template "main-nav" }}
+
+	</div>
+	<div class="container">
+	<h1>创建用户的唯一名称空间</h1>
+	<br />
+	<form action="{{ .Form.Action }}" method="POST">
+		<div class="input-row">
+			<label class="text-lg" for="user-namespace">名字空间 <span class="site-prefix">https://minibox.ai/</span></label>
+
+			<input id="user-namespace" name="namespace" class="input-lg" type="text" value="{{.Form.Namespace}}"> </input>
+		</div>
+		<div class="input-row">
+			<button class="btn btn-primary btn-lg submit" >创&nbsp;&nbsp;建</button>
+		</div>
+		<div>
+			<input type="hidden" name="name" value="{{.Form.Name }}" ></input>
+			<input type="hidden" name="family_name" value="{{.Form.FamilyName }}" ></input>
+			<input type="hidden" name="given_name" value="{{.Form.GivenName }}" ></input>
+			<input type="hidden" name="email" value="{{.Form.Email }}"  ></input>	
+			<input type="hidden" name="sub" value="{{.Form.Sub }}" ></input>
+			<input type="hidden" name="profile" value="{{.Form.Profile }}" ></input>
+			<input type="hidden" name="picture" value="{{.Form.Picture }}" ></input>
+			<input type="hidden" name="gender" value="{{.Form.Gender }}" ></input>					
+		</div>
+	</form>
+	</div>
+
+</body>
+</html>

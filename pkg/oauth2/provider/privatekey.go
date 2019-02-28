@@ -1,0 +1,34 @@
+//+build server
+
+package provider
+
+func init() {
+	privatekeyPEM = []byte(`-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD7xh7Nb/kjrZ8O
+TDru92ZWkBdV48jT+DuTEZa9pWSfGf5PZh2SmZyaUPlZEYd3ftwYYBbWFM7GVw7O
+m165TfXKYp6RapDKBjOWUxRWQev53YXSh44OnPhC+edc9L//WhSZfInb6hd/lVND
+iqvXo0OVOS5nB7noAu+T9zbnJ03pJWrp7pncGWWBn4mXCV7Mu7eRaRZozVne0kyv
+VP9+u/Z2JkXkTN82b/0UvyWVXauF0Nm7s4vVAyG5KJB9S9iVEss1Le/XB2X5XhbL
+ttacm+RdOIbOnhFrmADblfEBpifwYL3pJlQAnz/YnaT7WzAU1WTk5bpPQuxIH1YX
+nS3VmL+5AgMBAAECggEAJk87GJ9VFWyxqwdGYF4coEdEhbknMbmvtu0SNsEX0m2u
+GH69OTVOctynVDoqlrAi5UKZtvFrlRpiEmXpv+Bw6d6fqhjA9zyCVPlHOujE8zwV
+xLcDko2n6OkFn0tOe5hFUiV1BJVWBf++r6RGCYW6HtaYjOzMCNWJhsYzAHEmlbbi
+jwF06EBHSqnpK7upvePobH1jx2t0mywFVkhfSdrKx84Q7w/gSuwXQbiqdcXBE6fq
+LdwBccqG+HEf7KlMI4dzHTt8++v8r66WpkAXSNcCNVTAGtEUpnow7wxlFIKoHrLZ
+WsNYW13v+AAdRHqe05iIfrfqr6UpVDR4S3j8m2FaAQKBgQD+ZEZiIiPEYoa5rRqf
+9eqDEszYCTf975Q3sEH7UXKmmIraNnQvma3rfY6Pl7OKexah4xJY2kp/2Nz8mHL2
+Mrp3oT9CNMMCfQ2OoziusypodQ4n1dipMjAjfGNZdMDVvx/xKpPTJxr4G22PHGhZ
+nj5Qzb3LdQC9frH79lk2qBAKUQKBgQD9XZvLcy1mg5jeJSlx4uRZJNCbfXwzM+yj
+Qxy7Niqx3ZXbRX6/j0vRxm2T3+Ey+dx3+vlSqegoN8hVagBmAiMrTo0rv9DzxSN+
+sHvBM1HHKwq01GOpi3uYihY/N0LabIfBaEv6xdgxZ/R+foci6Jb5NJ3iipOxD+1j
+/Uq9qdac6QKBgDiVMzaGo2/9/jt0blSgDS5kUx3GRyb7T/tm//YXcqntigzpScSA
+qTeU8M2tj2jA4hLV//G1dBaltNmWSxPJysHrIrfmJm36RLayRVxOS6N6TdC8dvmD
+SUPLWgm+t1mTrlYlA0ZXD1+aMi8/wVIVqYStjoafmq+La6lAbS2ECjVRAoGBAMl6
+6y16xhvDgokFXFPoblZFZG6B94ZwQDoEYJCvnnwbDdR1CzoiJdUHypPRcTAsahov
+Rp1p5+gzk+f4h6CXCoihyrmDrBJuLq/MgF0/BkUwAS+Txj1JYlwHU3Gp7EvuCnbP
+Dby6IBYJ6O++hpBIDebW5McGFDS1yb296vWwXa4hAoGAYnl14ZWw/kDIRs+pbhM/
+sPQIo/MHYRIoNhPDiV2CeTbbtSbszPhrH8mqp2UmFe4bjDl9SnBmXcjUTpDv/T//
+TjPZVpd8yrv+Qn5jS8UtOcrUe4dskqshtl2DISp1sAySagzCh0k71V6a7U8Ttstc
+iGCNwOsHk/ffwt3twbMbdbo=
+-----END PRIVATE KEY-----`)
+}

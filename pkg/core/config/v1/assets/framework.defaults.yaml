@@ -1,0 +1,53 @@
+---
+languages:
+  Tensorflow:
+    alias:
+      - "tf"
+    lang: python
+    image: tensorflow/tensorflow
+    tags:
+      default: 1.8.0-py3
+    versions:
+      - "<1.2.0=>unavailable"
+      - "<1.8.0=>1.5.0-py3"
+      - ">=1.8.0=>1.8.0-py3"
+    versions_py2:
+      - ">=1.8.0=>1.5.0-py2"
+    versions_gpu:
+      - "<1.2.0=>unavailable"
+      - "<1.8.0=>1.5.0-gpu"
+      - ">=1.8.0=>1.8.0-gpu"   
+    env:
+      - "PYTHONPATH={workdir}"
+    cmd:
+      - python
+      - model.py
+    dirs:
+      data: ./data
+      log: ./logdir
+      model: ./models
+    workdir: "/usr/src/{projectName}"
+  Torch:
+    lang: lua
+    image: kaixhin/torch
+    tags:
+      default: latest
+    workdir: "/usr/src/{projectName}"
+    versions:
+      - ">0.0.0=>latest"
+    versions_gpu:
+      - ">0.0.0=>kaixhin/cuda-torch:7.5"
+    dirs:
+      data: ./data
+      log: ./logdir
+      model: ./models
+    cmd:
+      - /usr/bin/luarocks
+      - model.lua
+  PyTorch:
+    lang: lua
+    image: pytorch/pytorch
+    tags:
+      default: latest
+    workdir: "/usr/src/{projectName}"
+    

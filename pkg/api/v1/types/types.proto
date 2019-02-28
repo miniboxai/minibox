@@ -1,0 +1,279 @@
+syntax = "proto3";
+
+package types;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/field_mask.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-swagger/options/annotations.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "github.com/mwitkow/go-proto-validators/validator.proto";
+
+enum Role {
+    GUEST = 0;
+    MEMBER = 1;
+    ADMIN = 2;
+}
+
+// models
+message User {
+    uint32 id = 1 [
+        (gogoproto.customname) = "ID",
+        (validator.field) = {
+            int_gt: 0
+            human_error: "ID must a positive integer"
+        },
+        (gogoproto.moretags) = "topValue"
+    ];
+    Role   role = 2;
+    string name = 3;
+    string namespace = 4;
+    string avatar_url = 5;
+    google.protobuf.Timestamp created_at = 6 [
+        (gogoproto.stdtime) = true
+    ];
+    google.protobuf.Timestamp updated_at = 7 [
+        (gogoproto.stdtime) = true
+    ];
+    repeated Project projects = 8;
+    repeated Organization organizations = 9;
+}
+
+message Object {
+    string name = 1;
+    string etag = 2;
+    uint64 size = 3;
+    google.protobuf.Timestamp created_at = 4 [
+        (gogoproto.stdtime) = true
+    ];
+
+    google.protobuf.Timestamp updated_at = 5 [
+        (gogoproto.stdtime) = true
+    ];
+}
+
+message Project {
+    string id = 1 [
+        (gogoproto.customname) = "ID",
+        (validator.field) = {
+            string_not_empty: true
+            human_error: "ID cant be empty"
+        }
+    ];
+    string name = 2;
+    string namespace = 3;
+    google.protobuf.Timestamp created_at = 4 [
+        (gogoproto.stdtime) = true
+    ];
+    User author = 5;
+    bool private = 6;
+}
+
+message Dataset {
+    uint32 id = 1 [
+        (gogoproto.customname) = "ID"
+    ];
+    string name = 2;
+    string namespace = 3;
+    string description = 4;
+    string preprocessing = 5;
+    int32 instances = 6;
+    repeated string format = 7;
+    repeated string labels = 8;
+    google.protobuf.Timestamp publish_at = 9 [
+        (gogoproto.stdtime) = true
+    ];
+    google.protobuf.Timestamp modify_at = 10 [
+        (gogoproto.stdtime) = true
+    ];    
+    google.protobuf.Timestamp created_at = 11 [
+        (gogoproto.stdtime) = true
+    ];
+    repeated string resources = 12;
+    string lisense = 13;
+    repeated string reference = 14;
+    repeated string creators = 15;
+    bool private = 16;
+    User author = 17;
+}
+
+message Organization {
+    uint32 id = 1 [
+        (gogoproto.customname) = "ID"
+    ];
+    string name = 2;
+    string namespace = 3;
+    string description = 4;
+    string site_url = 5;
+    string home_url = 6;
+    string avatar_url = 7;
+    User owner = 8;
+
+    google.protobuf.Timestamp created_at = 9 [
+        (gogoproto.stdtime) = true
+    ];
+    google.protobuf.Timestamp updated_at = 10 [
+        (gogoproto.stdtime) = true
+    ];
+}
+
+// Request/Response Types
+message UsersReply {
+    repeated User users = 1;
+}
+
+message ProjectsReply {
+    repeated Project projects = 1;
+}
+
+message UserRole {
+    Role role = 1;
+}
+
+message UpdateUserRequest {
+    // The user resource which replaces the resource on the server.
+    User user = 1;
+
+    // The update mask applies to the resource. For the `FieldMask` definition,
+    // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    google.protobuf.FieldMask update_mask = 2;
+}
+
+message ListProjectsRequest {
+    string username = 1;
+}
+
+message ListUsersRequest {
+    // Only list users created after this timestamp
+    google.protobuf.Timestamp created_since = 1 [
+        (gogoproto.stdtime) = true
+    ];
+    // Only list users older than this Duration
+    google.protobuf.Duration older_than = 2 [
+        (gogoproto.stdduration) = true
+    ];
+}
+
+message CreateDatasetRequest {
+    string name = 1;
+    string namespace = 2;
+    bool private = 3;
+    string description = 4;
+    string preprocessing = 5;
+    repeated string format = 6;
+    repeated string labels = 7;    
+    repeated string resources = 8;
+    string lisense = 9;
+    repeated string reference = 10;
+    repeated string creators = 11;
+}
+
+message ListDatasetsRequest {
+    string namespace = 1;
+    bool showPrivate = 2;
+}
+
+message CreateProjectRequest {
+    string namespace = 1;
+    string name  = 2;
+    bool private = 3;
+    string description = 4;
+    string git_repos =  5;
+}
+
+message GetProjectRequest {
+    string project_id = 1;
+    string namespace = 2;
+    string name = 3;
+}
+
+message DeleteProjectRequest {
+    string project_id = 1;
+    bool force = 2;
+}
+
+message UpdateProjectRequest {
+    string project_id = 1;
+    string name = 2 [
+        (gogoproto.nullable) = true
+    ];
+
+    oneof private {
+        bool value = 3;
+    }
+}
+
+message DatasetsReply {
+    repeated Dataset datasets = 1;
+}
+
+message DeleteDatasetRequest {
+    uint32 dataset_id = 1;
+}
+
+message RestoreDatasetRequest {
+    uint32 dataset_id = 1;   
+}
+
+message ListObjectsRequest {
+    ObjectID id = 1;
+    string blob = 2;
+}
+
+message GetObjectRequest {
+    ObjectID dataset_id = 1;
+    string blob = 2;
+    uint32 part_size = 3;
+}
+
+message ObjectID {
+    oneof value {
+        uint32 dataset_id = 1;
+        string name = 2;
+    }
+}
+
+message PutObjectRequest {
+    message Key {
+        ObjectID id = 1; 
+        string blob = 2;
+    }
+
+    message Chunk {
+          bytes data = 1;
+          int64 position = 2;
+    }
+    
+    oneof value {
+        Key key = 1;
+        Chunk chunk = 2;
+    }
+}
+
+message DeleteObjectRequest {
+    uint32 dataset_id = 1;
+    string blob = 2;
+}
+
+message ObjectReply {
+    Object object = 1;
+}
+
+message PutObjectReply {
+    string etag = 1;
+    uint32 size = 2;
+    string version_id = 3;
+}
+
+message GetObjectReply {
+    bytes data = 1;
+    int64 position = 2;
+}
+
+message ObjectsReply {
+    repeated Object objects = 1;
+}
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+</head>
+<body>
+	<div class="nav">
+		Minibox.AI 	{{ template "main-nav" }}
+	</div>
+	<div class="container">
+	<h1>Google Provider 需要配置!</h1>
+    <p>请在你的开发环境或生产环境中，配置 $HOME/.minibox/config.yaml 文件</p>
+    <pre>
+server:
+  oauth2:
+    signin:
+      google:
+        ClientID: 48759119682-lcbmjchsks4b942fan3vlf9pqp7qt6n7.apps.googleusercontent.com
+        Secret: lSr3hNmWgPPbb8-5PxznRV96
+    </pre>
+	<p><a href="{{ .DOC_URL }}" >了解详细帮助</a></p>
+	<br />
+	</div>
+
+</body>
+</html>

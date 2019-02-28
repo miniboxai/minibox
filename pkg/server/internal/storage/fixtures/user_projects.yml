@@ -1,0 +1,9 @@
+# user_projects.yaml
+- user_id: 1
+  project_id: 1
+  open: true
+- user_id: 1
+  project_id: 2
+  open: false
+- user_id: 2
+  project_id: 1

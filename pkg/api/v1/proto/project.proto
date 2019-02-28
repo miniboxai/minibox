@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/field_mask.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-swagger/options/annotations.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "github.com/mwitkow/go-proto-validators/validator.proto";
+import "types.proto";
+
+
+option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
+  info: {
+    version: "1.0";
+  };
+  external_docs: {
+    url: "https://docs.minibox.ai/";
+    description: "Minibox API repository";
+  }
+  schemes: HTTPS;
+};
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+
+service ProjectService {
+
+  rpc ListProjects(types.ListProjectsRequest) returns (types.ProjectsReply) {
+    option (google.api.http) = {
+      get: "/api/v1/projects"
+    };
+  }
+
+  rpc CreateProject(types.CreateProjectRequest) returns (types.Project) {
+    option (google.api.http) = {
+      post: "/api/v1/projects"
+      body: "*"
+    };
+  }
+
+  rpc GetProject(types.GetProjectRequest) returns (types.Project) {
+    option (google.api.http) = {
+      get: "/api/v1/projects/{project_id}"
+    };
+  }
+
+  rpc DeleteProject(types.DeleteProjectRequest) returns (types.Project) {
+    option (google.api.http) = {
+      delete: "/api/v1/projects/{project_id}"
+    };
+  }
+
+  rpc UpdateProject(types.UpdateProjectRequest) returns (types.Project) {
+    option (google.api.http) = {
+      put: "/api/v1/projects/{project_id}"
+      body: "*"
+    };
+  }    
+
+}

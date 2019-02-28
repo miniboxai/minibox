@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+	<script type="text/javascript" src="/static/js/login.js"></script>
+</head>
+<body>
+	<div class="nav">
+		Minibox.AI
+		{{ template "main-nav" }}
+	</div>
+	<div class="container">
+	<h1>数据集</h1>
+	<br />
+	<p>
+In machine learning and deep learning we can’t do anything without data. So the people that create datasets for us to train our models are the (often under-appreciated) heros. Some of the most useful and important datasets are those that become important “academic baselines”; that is, datasets that are widely studied by researchers and used to compare algorithmic changes. Some of these become household names (at least, among households that train models!), such as MNIST, CIFAR 10, and Imagenet.
+	</p>
+	<div>
+		<h2>Image Classification</h2>
+		<ul>
+			<li>MNIST, <p>Classic dataset of small (28x28) handwritten grayscale digits, developed in the 1990s for testing the most sophisticated models of the day; today, often used as a basic “hello world” for introducing deep learning. This fast.ai datasets version uses a standard PNG format instead of the special binary format of the original, so you can use the regular data pipelines in most libraries; if you want to use just a single input channel like the original, simply pick a single slice from the channels axis. <a href="/datasets/mnist">detail</a></p></li>
+			<li>CIFAR10, <p>60000 32x32 colour images in 10 classes, with 6000 images per class (50000 training images and 10000 test images). Very widely used today for testing performance of new algorithms. This fast.ai datasets version uses a standard PNG format instead of the platform-specific binary formats of the original, so you can use the regular data pipelines in most libraries.</p></li>
+			<li>CIFAR100 <p>This dataset is just like the CIFAR-10, except it has 100 classes containing 600 images each. There are 500 training images and 100 testing images per class. The 100 classes in the CIFAR-100 are grouped into 20 superclasses. Each image comes with a “fine” label (the class to which it belongs) and a “coarse” label (the superclass to which it belongs).</p></li>
+			<li>Caltech-UCSD Birds-200-2011, <p>An image dataset with photos of 200 bird species (mostly North American); it can also be used for localization. Number of categories: 200; Number of images: 11,788; Annotations per image: 15 Part Locations, 312 Binary Attributes, 1 Bounding Box</p></li>
+		</ul>
+		<h2>NLP</h2>
+		<ul></ul>
+	</div>
+	</div>
+</body>
+</html>

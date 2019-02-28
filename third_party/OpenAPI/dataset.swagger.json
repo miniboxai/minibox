@@ -1,0 +1,584 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "dataset.proto",
+    "version": "1.0"
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/datasets": {
+      "get": {
+        "operationId": "GetDatasetObject",
+        "responses": {
+          "200": {
+            "description": "(streaming responses)",
+            "schema": {
+              "$ref": "#/definitions/typesGetObjectReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset_id.dataset_id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "dataset_id.name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "blob",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "part_size",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      },
+      "post": {
+        "operationId": "PutDatasetObject",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/typesPutObjectReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": " (streaming inputs)",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/typesPutObjectRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/api/v1/datasets/{dataset_id}": {
+      "delete": {
+        "operationId": "DeleteDataset",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/typesDataset"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/api/v1/datasets/{dataset_id}/blob/{blob}": {
+      "delete": {
+        "operationId": "DeleteDatasetObject",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/typesObjectReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "blob",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/api/v1/datasets/{dataset_id}/restore": {
+      "put": {
+        "operationId": "RestoreDataset",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/typesDataset"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
+    "/api/v1/datasets/{id.dataset_id}/blob/{blob}": {
+      "get": {
+        "operationId": "ListDatasetObjects",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/typesObjectsReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id.dataset_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "blob",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id.name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "PutObjectRequestChunk": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string",
+          "format": "byte"
+        },
+        "position": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "PutObjectRequestKey": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/typesObjectID"
+        },
+        "blob": {
+          "type": "string"
+        }
+      }
+    },
+    "typesCreateDatasetRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "private": {
+          "type": "boolean",
+          "format": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "preprocessing": {
+          "type": "string"
+        },
+        "format": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lisense": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "typesDataset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "preprocessing": {
+          "type": "string"
+        },
+        "instances": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "format": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "publish_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "modify_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lisense": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "private": {
+          "type": "boolean",
+          "format": "boolean"
+        },
+        "author": {
+          "$ref": "#/definitions/typesUser"
+        }
+      }
+    },
+    "typesDatasetsReply": {
+      "type": "object",
+      "properties": {
+        "datasets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typesDataset"
+          }
+        }
+      }
+    },
+    "typesGetObjectReply": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string",
+          "format": "byte"
+        },
+        "position": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "typesObject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "size": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "typesObjectID": {
+      "type": "object",
+      "properties": {
+        "dataset_id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "typesObjectReply": {
+      "type": "object",
+      "properties": {
+        "object": {
+          "$ref": "#/definitions/typesObject"
+        }
+      }
+    },
+    "typesObjectsReply": {
+      "type": "object",
+      "properties": {
+        "objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typesObject"
+          }
+        }
+      }
+    },
+    "typesOrganization": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "site_url": {
+          "type": "string"
+        },
+        "home_url": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/definitions/typesUser"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "typesProject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "author": {
+          "$ref": "#/definitions/typesUser"
+        },
+        "private": {
+          "type": "boolean",
+          "format": "boolean"
+        }
+      }
+    },
+    "typesPutObjectReply": {
+      "type": "object",
+      "properties": {
+        "etag": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "version_id": {
+          "type": "string"
+        }
+      }
+    },
+    "typesPutObjectRequest": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#/definitions/PutObjectRequestKey"
+        },
+        "chunk": {
+          "$ref": "#/definitions/PutObjectRequestChunk"
+        }
+      }
+    },
+    "typesRole": {
+      "type": "string",
+      "enum": [
+        "GUEST",
+        "MEMBER",
+        "ADMIN"
+      ],
+      "default": "GUEST"
+    },
+    "typesUser": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "role": {
+          "$ref": "#/definitions/typesRole"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "projects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typesProject"
+          }
+        },
+        "organizations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typesOrganization"
+          }
+        }
+      },
+      "title": "models"
+    }
+  },
+  "externalDocs": {
+    "description": "Minibox API repository",
+    "url": "https://github.com/gogo/grpc-example"
+  }
+}

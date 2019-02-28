@@ -1,0 +1,92 @@
+.one_person {
+	width: 380px;
+	margin: 0 auto;
+	margin-top: 120px;
+}
+
+.grant_access {
+	padding: 20px;
+}
+
+.grant_access .avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.grant-figures {
+	position: relative;
+	height: 140px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.left-avatar {
+	left: 25px;
+	position: absolute;
+	z-index: 105;
+}
+
+.left-avatar p {
+	margin-top: 5px;
+}
+
+.right-avatar {
+	right: 25px;
+	position: absolute;
+	z-index: 100;
+	text-align: right;
+}
+
+.right-avatar p {
+	margin-top: 5px;
+}
+
+.grant_arrow>.arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 85px;
+	top: 15px;
+	z-index: 103;
+	border-style: solid;
+	border-width: 25px 0 25px 25px;
+	border-color: transparent transparent transparent #ddd;
+}
+
+.grant_arrow>.arrow:after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 85px;
+	top: 15px;
+	z-index: 104;
+	border-style: solid;
+	border-width: 25px 0 25px 25px;
+	border-color: transparent transparent transparent white;
+}
+
+
+.grant_arrow>.bar {
+	position: absolute;
+	top: 25px;
+	left: 80px;
+	width: 110px;
+	height: 30px;
+	z-index: 104;	
+	background-color: #ddd;
+}
+
+.permission-list {
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	color: #666;
+	font-size: 0.75em;
+}
+
+.permission-list li {
+	margin: 10px 0;

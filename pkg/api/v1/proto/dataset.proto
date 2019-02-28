@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/field_mask.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-swagger/options/annotations.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "github.com/mwitkow/go-proto-validators/validator.proto";
+import "types.proto";
+
+
+option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
+  info: {
+    version: "1.0";
+  };
+  external_docs: {
+    url: "https://github.com/gogo/grpc-example";
+    description: "Minibox API repository";
+  }
+  schemes: HTTPS;
+};
+
+// Enable custom Marshal method.
+option (gogoproto.marshaler_all) = true;
+// Enable custom Unmarshal method.
+option (gogoproto.unmarshaler_all) = true;
+// Enable custom Size method (Required by Marshal and Unmarshal).
+option (gogoproto.sizer_all) = true;
+// Enable registration with golang/protobuf for the grpc-gateway.
+option (gogoproto.goproto_registration) = true;
+// Enable generation of XXX_MessageName methods for grpc-go/status.
+option (gogoproto.messagename_all) = true;
+
+service DatasetService {
+    rpc CreateDataset(types.CreateDatasetRequest) returns (types.Dataset) {
+        option (google.api.http) = {
+            post: "/api/v1/datasets"
+            body: "*"
+        };
+    }
+
+    rpc ListDatasets(types.ListDatasetsRequest) returns (types.DatasetsReply) {
+        option (google.api.http) = {
+            get: "/api/v1/datasets"
+        };
+    }
+
+    rpc DeleteDataset(types.DeleteDatasetRequest) returns (types.Dataset) {
+          option (google.api.http) = {
+            delete: "/api/v1/datasets/{dataset_id}"
+        };  
+    }
+
+    rpc RestoreDataset(types.RestoreDatasetRequest) returns (types.Dataset) {
+        option (google.api.http) = {
+            put: "/api/v1/datasets/{dataset_id}/restore"
+        };  
+    }    
+
+    rpc ListDatasetObjects(types.ListObjectsRequest) returns (types.ObjectsReply) {
+        option (google.api.http) = {
+            get: "/api/v1/datasets/{id.dataset_id}/blob/{blob=*}"
+        };    
+    }
+
+    rpc GetDatasetObject(types.GetObjectRequest) returns (stream types.GetObjectReply) {
+        option (google.api.http) = {
+            get: "/api/v1/datasets"
+        };    
+    }
+
+    rpc PutDatasetObject(stream types.PutObjectRequest) returns (types.PutObjectReply) {
+        option (google.api.http) = {
+            post: "/api/v1/datasets"
+            body: "*"
+        };    
+    }
+
+    rpc DeleteDatasetObject(types.DeleteObjectRequest) returns (types.ObjectReply) {
+        option (google.api.http) = {
+            delete: "/api/v1/datasets/{dataset_id}/blob/{blob=*}"
+        };    
+    }
+}

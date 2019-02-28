@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.vscode/
+
+node_modules/
+vendor/
+bin/
+certs/
+.vs_code/
+
+*.db
+
+main

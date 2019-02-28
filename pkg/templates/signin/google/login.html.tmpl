@@ -1,0 +1,22 @@
+<html>
+	<title>Golang Google</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+	<script type="text/javascript" src="/static/js/login.js"></script>
+	<body> 
+		<div class="nav">
+			Minibox.AI
+			{{ template "main-nav" }}
+		</div>
+		<div class="container">
+			<a href="{{ .LoginURL }}" ><button id="loginBtn" class="btn btn-primary black bg-silver" >Login with Google!</button></a> 
+			<script type="text/javascript">
+				loginBtn.onclick = function() {
+					setCallbackUrl(window.location.href);
+					// setCallbackUrl("/");					
+				}
+			</script>
+			<br />
+		</div>		
+
+	</body>
+</html>

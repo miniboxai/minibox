@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>授权应用使用用户登录权限</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+</head>
+<body class="bg-silver">
+	<div class="one_person">
+		<div class="container">
+			<div class="panel grant_access" >
+			<div class="panel-heading">
+			<h3 >授权应用使用用户登录权限</h3>
+			</div>
+
+			<div class="grant-figures">
+			<div class="left-avatar">
+				<img class="avatar" src="{{ .Avatar }}" alt="user avatar">
+				<p>{{.Name }}</p>
+			</div>
+			<div class="grant_arrow">
+				<div class="bar"></div>
+				<div class="arrow"></div>				
+			</div>
+			<div class="right-avatar">
+				<!-- <img class="avatar" src="{{ .Avatar }}" alt="user avatar"> -->
+				<img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+				<p>MiniBox Cli</p>
+			</div>	
+			</div>
+			<ul class="permission-list">
+				<li>获取用户名称，帐号，头像，性别等基本信息</li>
+				<li>访问用户资源</li>
+				<li>创建项目，上传数据等</li>
+			</ul>
+			<div class="clearfix">
+				<form method="post" >
+					<span class="right">
+					<button class="btn btn-primary" name="dogrant" value="1">同意</button>
+					<button class="btn btn-primary bg-red">拒绝</button>
+					</span>
+				</form>
+			</div>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
